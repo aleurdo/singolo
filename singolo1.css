@@ -1,0 +1,210 @@
+    @font-face { 
+    font-family: 'Lato'; 
+    src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    }
+
+    @font-face {
+        font-family: 'Lato';
+        src: url('assets/fonts/Lato-Black.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Lato';
+        src: url('assets/fonts/Lato-Regular.ttf') format('truetype'); 
+    }
+    @font-face {
+        font-family: 'Lato';
+        src: url('assets/fonts/Lato-Light.ttf') format('truetype');
+    }
+    
+h1, body {
+    margin: 0px; 
+}
+.main_wrapper {
+    background-color: #f2f2f2;
+    width: 1020px;
+    margin: auto;
+}
+/* header background-color */
+.header {
+    background-image: url("assets/images/header_background.png");
+    height: 95px; 
+    background-repeat: repeat-x;
+}
+.logo_container {
+    padding-top: 1.9em;
+}
+.header_logo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.75em;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header_logo_title span {
+    color:#be5d5a;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.wrapper {
+    display: block;
+    width: 940px;
+    height: 95px;
+    margin: auto; 
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header_navigation {
+    margin-top: 2.5em;
+    float: right;
+    height: 30px;
+}
+.header_navigation li {
+    display: inline-block;
+    color:white;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.header_navigation li a {
+    color:white;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+}
+.navigation li:before {
+    content: '\00a0\2022\00a0\00a0';
+    color:#494e62 ;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 10px;
+}
+
+.navigation li:first-child:before {
+    content: '';
+}
+.slider_wrapper {
+    display: grid;
+    grid-template-columns: 80px 300px auto 75px;
+    padding: 10px;   
+    background-color:#f06c64;
+    height: 574px;
+}
+.nav_link:hover {
+    content: "";
+        color:#bc5c59;
+}
+.left_arrow {
+    margin:auto; 
+}
+.right_arrow {
+    margin:auto;  
+}
+
+.left_arrow:hover {
+        margin:auto;
+        filter:saturate(8);
+          }
+.right_arrow:hover {
+        margin:auto;  
+        filter:saturate(8);
+}
+
+ .slider_vertical_phone_content {
+    position: absolute;
+    margin-top: 43px;
+    margin-left: 22px;
+}
+.slider_horizontal_phone_content {
+    position: absolute;
+    margin-top: 164px;
+    margin-left: 35px;
+}
+
+.slider_bottom_wrapper {
+    height: 6px;
+    background-color:#ea676b;
+    
+}
+.layout_6_column {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-left: 20px;
+    padding-right: 45px;
+}
+    
+.wrapper_layout_6_column {
+    display: block;
+    width: 320px;
+}
+
+.container_image {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 20px;
+    vertical-align: top;
+    
+}
+
+.container_text {
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    margin-left: 14px;
+    /* margin-top: 5px; */
+    /* text-align: justify; */
+    height: 125px;
+}
+
+.container_text h3 {
+    margin-block-start: 23px;
+    margin-block-end: 0px;
+}
+
+.service_wrapper {
+    margin-top: 60px;
+    margin-left: 40px;  
+}
+.service_wrapper h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+.service_wrapper p {
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.008em;
+    line-height: 30px;          
+}
+
+.container_text h3 {
+    font-family: 'Lato',sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    
+}
+.container_text p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.bottom_wrapper {
+    color: rgb(93, 90, 90);
+}
+    
+
