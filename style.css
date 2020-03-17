@@ -23,6 +23,10 @@
 }
 
 
+/* html {
+    margin-top: 95px;
+} */
+
 h1,
 body {
     margin: 0px;
@@ -32,21 +36,25 @@ body {
     position: relative;
     background-color: #f2f2f2;
     width: 1020px;
-    height:1195px;
+    height: 1195px;
     margin: auto;
 }
 
+
 /* header background-color */
+
 .header {
     background-image: url("assets/images/header_background.png");
     height: 95px;
+    width: 1020px;
     background-repeat: repeat-x;
-
+    position: fixed;
+    z-index: 10;
+    top: 0;
 }
 
 .logo_container {
     padding-top: 1.9em;
-
 }
 
 .header_logo {
@@ -72,7 +80,7 @@ body {
     margin: auto;
 }
 
-.navigation {
+#navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -82,18 +90,15 @@ body {
     margin-top: 2.5em;
     float: right;
     height: 30px;
+}
 
+a,
+a:hover {
+    color: white;
 }
 
 .header_navigation li {
     display: inline-block;
-    color: white;
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
-
-.header_navigation li a {
-    color: white;
     font-size: 12px;
     text-transform: uppercase;
     font-family: 'Lato';
@@ -101,24 +106,31 @@ body {
     text-align: left;
     letter-spacing: -0.005em;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.navigation li:before {
+.active {
+    color: #be5d5a;
+}
+
+#navigation li:before {
     content: '\00a0\2022\00a0\00a0';
     color: #494e62;
     margin-left: 7px;
     margin-right: 7px;
     font-size: 10px;
+    pointer-events: unset;
 }
 
-.navigation li:first-child:before {
+#navigation li:first-child:before {
     content: "";
 }
 
 .slider_wrapper {
     display: grid;
     grid-template-columns: 80px 300px auto 75px;
-    padding: 10px;
+    /* padding: 10px; */
+    padding-top: 12px;
     background-color: #f06c64;
     height: 574px;
 }
@@ -161,7 +173,33 @@ body {
 .slider_bottom_wrapper {
     height: 6px;
     background-color: #ea676b;
+}
 
+
+/* Second slider */
+
+.slider_wrapper_2 {
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+    width: 1020px;
+    height: 600px;
+    background: #648BF0;
+}
+
+.slider_vertical_phone_group {
+    position: relative;
+    margin-left: 167px;
+}
+
+.slider_vertical_phone_group img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.slider {
+    display: block;
 }
 
 .layout_6_column {
@@ -181,7 +219,6 @@ body {
     margin-top: 25px;
     margin-left: 20px;
     vertical-align: top;
-
 }
 
 .container_text {
@@ -190,9 +227,7 @@ body {
     vertical-align: top;
     margin-left: 14px;
     height: 125px;
-
 }
-
 
 .service_wrapper {
     width: 940px;
@@ -206,7 +241,6 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
     color: #666d89;
-
 }
 
 .service_wrapper p {
@@ -227,7 +261,6 @@ body {
     margin-top: 22px;
     margin-bottom: 0px;
     color: #666d89;
-
 }
 
 .container_text p {
@@ -239,8 +272,6 @@ body {
     text-align: justify;
     letter-spacing: -0.05em;
     color: #666d89;
-  
-   
 }
 
 .bottom_bottom_container {
@@ -251,9 +282,15 @@ body {
     background-color: #fff;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+}
+
 
 /* Portfolio */
-
 
 body {
     margin: 0px;
@@ -266,13 +303,11 @@ body {
     height: 1604px;
     margin: 0 auto;
     background-color: #f2f2f2;
-
 }
 
 .container_wrap {
     height: 864px;
     background-color: #2d303a;
-
 }
 
 .portfolio_wrap {
@@ -303,7 +338,6 @@ body {
     text-overflow: clip;
 }
 
-
 .filter_list {
     font-size: 0.7em;
     line-height: 18px;
@@ -323,7 +357,6 @@ body {
     padding: 3px 4px 4px 6px;
     text-align: center;
     letter-spacing: 0.03em;
-
 }
 
 .filter_list li:hover {
@@ -347,16 +380,21 @@ body {
     margin-left: 35px;
     margin-right: 35px;
     overflow: hidden;
-
 }
 
-.portfolio_images div {
+.portfolio_image {
+    border: #2d303a solid 2px;
     margin: 10px 5px 6px 5px;
 }
 
-.portfolio_images div:nth-child(n+13) {
+.active-list-img {
+    border: #F06C64 solid 5px;
+}
+
+.portfolio_images img:nth-child(n+13) {
     display: none;
 }
+
 
 /* It is bottom part of background */
 
@@ -368,11 +406,9 @@ body {
 .about_us_container {
     margin-left: 40px;
     margin-right: 40px;
-
 }
 
 .about_us_container h3 {
-
     font-family: "Lato";
     font-weight: 900;
     font-size: 30px;
@@ -390,7 +426,6 @@ body {
     font-family: "Lato";
     font-weight: 300;
     text-align: justify;
-    
 }
 
 .employees_photo_wrapper {
@@ -399,7 +434,6 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 40px;
-
 }
 
 .employees_3_column {
@@ -439,7 +473,6 @@ body {
     text-align: justify;
     margin-right: 10px;
     margin-top: 8px;
-
 }
 
 .social_container_1 {
@@ -466,14 +499,14 @@ body {
 .social_container_1 a :hover {
     cursor: pointer;
     background-color: #333;
-    
 }
 
+
 /* It is bottom white background */
+
 .employees_bottom_container {
     position: absolute;
     bottom: 0px;
-
     background-color: #fff;
     height: 6px;
     width: 1020px;
@@ -482,10 +515,8 @@ body {
 
 /* get a quote */
 
-
 body {
     margin: 0px;
-
 }
 
 .main_wrapper_2 {
@@ -493,31 +524,31 @@ body {
     width: 1020px;
     height: 654px;
     margin: 0 auto;
-
 }
 
+
 /*  top container */
+
 .top_container {
     position: relative;
     height: 654px;
     background-color: #f06c64;
-
 }
 
+
 /* center background container */
+
 .center_background_container {
     position: absolute;
     width: 100%;
     height: 6px;
     background-color: #ea676b;
     bottom: 0;
-
 }
 
 .header_container {
     margin: 0px 40px 20px 40px;
     padding-top: 30px;
-
 }
 
 .header_container h4 {
@@ -528,11 +559,9 @@ body {
     font-weight: 900;
     text-align: left;
     margin-bottom: 20px;
-
 }
 
 .header_container p {
-
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
@@ -541,7 +570,6 @@ body {
     text-align: justify;
     margin-top: 22px;
     padding-top: 4px;
-
 }
 
 .grid_2_column {
@@ -550,19 +578,20 @@ body {
     margin-right: 40px;
     margin-top: 44px;
     grid-template-columns: 620px 320px;
-
 }
+
 
 /* first grid column */
 
+
 /* Form for registration */
+
 #name,
 #email,
 #subject {
     width: 603px;
     height: 34px;
     margin-bottom: 15px;
-    
 }
 
 #description {
@@ -570,7 +599,6 @@ body {
     width: 603px;
     resize: none;
     padding-top: 7px;
-
 }
 
 .quote_container input,
@@ -585,10 +613,7 @@ textarea {
     font-weight: 400;
     text-align: left;
     padding-left: 13px;
-
-
 }
-
 
 .quote_container input::placeholder {
     color: #f48c8f;
@@ -607,7 +632,6 @@ textarea {
     box-shadow: 5px 5px 5px #ccc;
     color: #000;
     background-color: #f0d8d9;
-
 }
 
 .quote_container textarea::placeholder {
@@ -615,13 +639,11 @@ textarea {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 12px;
-
 }
 
 .quote_container textarea:focus {
     border: 1px solid #fefefe;
     color: #fff;
-
 }
 
 .quote_container textarea:hover {
@@ -629,12 +651,12 @@ textarea {
     box-shadow: 5px 5px 5px #ccc;
     color: #000;
     background-color: #f0d8d9;
-
 }
+
 
 /* button submit */
 
-.submit_button {
+#submit_button {
     width: 100px;
     height: 40px;
     border-radius: 5px;
@@ -648,21 +670,20 @@ textarea {
     text-align: center;
     margin-right: 0px;
     margin-left: 520px;
-
 }
 
-.submit_button:hover {
+#submit_button:hover {
     cursor: pointer;
     box-shadow: 5px 5px 5px #ccc;
     color: #000;
     background-color: #f0d8d9;
-
 }
+
 
 /* second grid column */
 
 .contact_info_wrapper {
-       margin-left: 20px;
+    margin-left: 20px;
 }
 
 .contact_info_wrapper h4 {
@@ -684,11 +705,9 @@ textarea {
     font-weight: 400;
     text-align: justify;
     margin-top: 10px;
-
 }
 
 .contact_icons_container {
-
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr 1fr;
@@ -701,8 +720,6 @@ textarea {
     font-weight: 400;
     align-items: baseline;
     margin-top: 24px;
-
-
 }
 
 .contact_icons_container a {
@@ -711,16 +728,13 @@ textarea {
 }
 
 .contact_icons_container p {
-
     margin-top: 0px;
     margin-bottom: 0px;
-
 }
 
 .contact_icons_container img:nth-child(1) {
     margin-left: 3px;
 }
-
 
 .footer_container {
     position: relative;
@@ -728,14 +742,12 @@ textarea {
     height: 76px;
     background-color: #2d303a;
     margin: 0 auto;
-
 }
 
 .social_container {
     position: absolute;
     bottom: 20px;
     right: 35px;
-
 }
 
 .social_container_icon a img {
@@ -758,7 +770,6 @@ textarea {
 .social_container a :hover {
     cursor: pointer;
     background-color: #333;
-
 }
 
 .footer_container p {
@@ -770,5 +781,144 @@ textarea {
     font-size: 12px;
     color: #666d89;
     padding-left: 2px;
+}
 
+
+/* slider screen off */
+
+.screenOff_1 {
+    display: block;
+    position: absolute;
+    width: 188px;
+    height: 335px;
+    background-color: black;
+    margin-left: 36px;
+    margin-top: 106px;
+    opacity: 0;
+}
+
+.screenOff_2 {
+    display: block;
+    position: absolute;
+    width: 333px;
+    height: 188px;
+    background-color: black;
+    margin-left: 95px;
+    margin-top: 178px;
+    opacity: 0;
+}
+
+.screenOff_3 {
+    display: block;
+    position: absolute;
+    width: 201px;
+    height: 355px;
+    background-color: black;
+    margin-left: 155px;
+    margin-top: 112px;
+    opacity: 0;
+}
+
+.screenOff_4 {
+    display: block;
+    position: absolute;
+    width: 123px;
+    height: 217px;
+    background-color: black;
+    margin-left: 9px;
+    margin-top: 194px;
+    opacity: 0;
+}
+
+.screenOff_5 {
+    display: block;
+    position: absolute;
+    width: 123px;
+    height: 217px;
+    background-color: black;
+    margin-left: 378px;
+    margin-top: 194px;
+    opacity: 0;
+}
+
+.phoneButton_1 {
+    display: block;
+    position: absolute;
+    left: 190px;
+    top: 460px;
+    z-index: 2;
+}
+
+.phoneButton_2 {
+    display: block;
+    position: absolute;
+    left: 421px;
+    top: 261px;
+    z-index: 2;
+}
+
+.phoneButton_3 {
+    display: block;
+    position: absolute;
+    margin-left: 234px;
+    margin-top: 199px;
+    z-index: 2;
+}
+
+
+/* Phone */
+
+.phonePowerOff {
+    opacity: 1;
+}
+
+
+/* partfolio filter-list */
+
+.active-list {
+    color: red
+}
+
+
+/* Get a quote */
+
+.message_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0008;
+}
+
+.message_block {
+    position: fixed;
+    top: 30%;
+    left: calc(50% - 250px);
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f48c8f;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.message_ok:hover {
+    cursor: pointer;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.hidden {
+    display: none;
+}
+
+#message_block p {
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
 }
