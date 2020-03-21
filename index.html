@@ -12,15 +12,15 @@
     <div style="height: 95px; display: block; position: relative;"></div>
     <a class="anchor" id="main_wrapper"></a>
     <div class="main_wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <div class="wrapper">
                 <nav class="header_navigation">
                     <ul id="navigation">
-                        <li><a href="#" class="nav_link active" onclick="goToAnchor('main_wrapper');return false;">home</a></li>
-                        <li><a href="#" class="nav_link" onclick="goToAnchor('service_wrapper');return false;">services</a></li>
-                        <li><a href="#" class="nav_link" onclick="goToAnchor('portfolio_wrap');return false;">portfolio</a></li>
-                        <li><a href="#" class="nav_link" onclick="goToAnchor('about_us_container');return false;">about</a></li>
-                        <li><a href="#" class="nav_link" onclick="goToAnchor('top_container');return false;">contact</a></li>
+                        <li><a href="#" id="menu_item_home" class="nav_link active" onclick="goToAnchor('main_wrapper');return false;">home</a></li>
+                        <li><a href="#" id="menu_item_services" class="nav_link" onclick="goToAnchor('service_wrapper');return false;">services</a></li>
+                        <li><a href="#" id="menu_item_portfolio" class="nav_link" onclick="goToAnchor('portfolio_wrap');return false;">portfolio</a></li>
+                        <li><a href="#" id="menu_item_about" class="nav_link" onclick="goToAnchor('about_us_container');return false;">about</a></li>
+                        <li><a href="#" id="menu_item_contact" class="nav_link" onclick="goToAnchor('top_container');return false;">contact</a></li>
                     </ul>
                 </nav>
                 <div class="logo_container">
@@ -30,109 +30,110 @@
                 </div>
             </div>
         </header>
-        <div class="sliders_wrapper">
-            <div class="slider">
-                <div class="slider_wrapper">
-                    <div class="left_arrow">
-                        <a href="#" onclick="plusDivs(-1)">
-                            <img src="assets/images/left_arrow.png" alt="#">
-                        </a>
-                    </div>
-                    <div class="slider_vertical_phone">
-                        <img src="assets/images/vertical_phone.png" class="slider_vertical_phone_content" alt="#">
-                        <img src="assets/images/PhoneButton.png" class="phoneButton_1" alt="#" onclick="switchPhoneState('screenOff_1')">
-                        <div class="screenOff_1" id="screenOff_1"></div>
-                    </div>
-                    <div class="slider_horizontal_phone">
-                        <img src="assets/images/horizontal_phone.png" class="slider_horizontal_phone_content" alt="#">
-                        <img src="assets/images/PhoneButton.png" class="phoneButton_2" alt="#" onclick="switchPhoneState('screenOff_2')">
-                        <div class="screenOff_2" id="screenOff_2"></div>
-                    </div>
-                    <div class="right_arrow">
-                        <a href="#" onclick="plusDivs(1)"><img src="assets/images/right_arrow.png" alt="#"></a>
+        <section class="sliders_wrapper_section">
+            <div class="sliders_wrapper">
+                <div class="slider">
+                    <div class="slider_wrapper">
+                        <div class="left_arrow">
+                            <a href="#" onclick="plusDivs(-1)">
+                                <img src="assets/images/left_arrow.png" alt="#">
+                            </a>
+                        </div>
+                        <div class="slider_vertical_phone">
+                            <img src="assets/images/vertical_phone.png" class="slider_vertical_phone_content" alt="#">
+                            <img src="assets/images/PhoneButton.png" class="phoneButton_1" alt="#" onclick="switchPhoneState('screenOff_1')">
+                            <div class="screenOff_1" id="screenOff_1"></div>
+                        </div>
+                        <div class="slider_horizontal_phone">
+                            <img src="assets/images/horizontal_phone.png" class="slider_horizontal_phone_content" alt="#">
+                            <img src="assets/images/PhoneButton.png" class="phoneButton_2" alt="#" onclick="switchPhoneState('screenOff_2')">
+                            <div class="screenOff_2" id="screenOff_2"></div>
+                        </div>
+                        <div class="right_arrow">
+                            <a href="#" onclick="plusDivs(1)"><img src="assets/images/right_arrow.png" alt="#"></a>
 
+                        </div>
                     </div>
+                    <div class="slider_bottom_wrapper"></div>
                 </div>
-                <div class="slider_bottom_wrapper"></div>
-            </div>
-            <!-- second slider -->
-            <div class="slider slider_2">
-                <div class="slider_wrapper_2">
-                    <div class="left_arrow">
-                        <a href="#" onclick="plusDivs(-1)"><img src="assets/images/left_arrow.png" alt="#"></a>
-                    </div>
-                    <div class="slider_vertical_phone_group">
-                        <img src="assets/images/phone-group.png" alt="#">
-                        <div class="screenOff_3" id="screenOff_3"></div>
-                        <div class="screenOff_4" id="screenOff_4" onclick="switchPhoneState('screenOff_4');"></div>
-                        <div class="screenOff_5" id="screenOff_5" onclick="switchPhoneState('screenOff_5');"></div>
-                        <img src="assets/images/PhoneButton.png" class="phoneButton_3" alt="#" onclick="switchPhoneState('screenOff_3');">
+                <!-- second slider -->
+                <div class="slider slider_2">
+                    <div class="slider_wrapper_2">
+                        <div class="left_arrow">
+                            <a href="#" onclick="plusDivs(-1)"><img src="assets/images/left_arrow.png" alt="#"></a>
+                        </div>
+                        <div class="slider_vertical_phone_group">
+                            <img src="assets/images/phone-group.png" alt="#">
+                            <div class="screenOff_3" id="screenOff_3"></div>
+                            <div class="screenOff_4" id="screenOff_4" onclick="switchPhoneState('screenOff_4');"></div>
+                            <div class="screenOff_5" id="screenOff_5" onclick="switchPhoneState('screenOff_5');"></div>
+                            <img src="assets/images/PhoneButton.png" class="phoneButton_3" alt="#" onclick="switchPhoneState('screenOff_3');">
 
-                    </div>
-                    <div class="right_arrow">
-                        <a href="#" onclick="plusDivs(1)"><img src="assets/images/right_arrow.png" alt="#"></a>
+                        </div>
+                        <div class="right_arrow">
+                            <a href="#" onclick="plusDivs(1)"><img src="assets/images/right_arrow.png" alt="#"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- !!!!!!!!!!!!!!!!! -->
-            <a class="anchor" id="service_wrapper"></a>
-            <section>
-                <div class="bottom_wrapper">
-                    <div class="service_wrapper">
-                        <h2>Our Services</h2>
-                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-                            nibh.
-                        </p>
+        </section>
+        <!-- !!!!!!!!!!!!!!!!! -->
+        <a class="anchor" id="service_wrapper"></a>
+        <section>
+            <div class="bottom_wrapper">
+                <div class="service_wrapper">
+                    <h2>Our Services</h2>
+                    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    </p>
+                </div>
+                <div class="layout_6_column">
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/pen.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>Custom Design</h3>
+                            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit </p>
+                        </div>
                     </div>
-                    <div class="layout_6_column">
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/pen.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>Custom Design</h3>
-                                <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit </p>
-                            </div>
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/bulb.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>Inovative Ideas</h3>
+                            <p>Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                         </div>
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/bulb.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>Inovative Ideas</h3>
-                                <p>Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-                            </div>
+                    </div>
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/heart.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>Love Is The Answer</h3>
+                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                         </div>
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/heart.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>Love Is The Answer</h3>
-                                <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-                            </div>
+                    </div>
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/phone.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>Responsive Layout</h3>
+                            <p>Sed porttitor placerat rhoncus. In at nunctellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</p>
                         </div>
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/phone.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>Responsive Layout</h3>
-                                <p>Sed porttitor placerat rhoncus. In at nunctellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.</p>
-                            </div>
+                    </div>
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/buble.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>24 / 7 Support</h3>
+                            <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
                         </div>
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/buble.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>24 / 7 Support</h3>
-                                <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
-                            </div>
-                        </div>
-                        <div class="wrapper_layout_6_column">
-                            <div class="container_image"><img src="assets/images/star.png" alt="#"></div>
-                            <div class="container_text">
-                                <h3>Feel Like A Star</h3>
-                                <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="wrapper_layout_6_column">
+                        <div class="container_image"><img src="assets/images/star.png" alt="#"></div>
+                        <div class="container_text">
+                            <h3>Feel Like A Star</h3>
+                            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="bottom_bottom_container"></div>
-            </section>
-        </div>
+            </div>
+            <div class="bottom_bottom_container"></div>
+        </section>
         <!-- Portfolio -->
         <a class="anchor" id="portfolio_wrap"></a>
         <section class="main_wrapper_1">
@@ -279,14 +280,15 @@
                     <!-- first grid column -->
                     <div class="quote_container">
 
-                        <form>
-                            <input type="text" id="name" name="name" placeholder="Name (Required)" required="">
-                            <input type="text" id="email" name="email" placeholder="Email (Required)" required="">
+                        <form method="post" action="#" id="form">
+                            <input type="text" id="name" name="name" maxlength="30" pattern="[A-Za-zА-яа-я-\s']{1,30}" placeholder="Name (Required)" required class="required_name">
+                            <input type="email" id="email" required class="required_email" placeholder="Email (Required)">
                             <input type="text" id="subject" name="Subject" placeholder="Subject">
-                            <textarea name="description" id="description" placeholder="Describe your project in detail..."></textarea>
-                            <button type="button" id="submit_button" value="submit">Submit</button>
+                            <textarea name="description" id="description" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
+                            <button type="button" id="submit_button" onclick="myFunction()" value="submit">Submit</button>
 
                         </form>
+
                         <!-- massage -->
                         <div id="message_container" class="message_container hidden">
                             <div id="message_block" class="message_block hidden">

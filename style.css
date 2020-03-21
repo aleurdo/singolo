@@ -22,11 +22,6 @@
     font-weight: 300;
 }
 
-
-/* html {
-    margin-top: 95px;
-} */
-
 h1,
 body {
     margin: 0px;
@@ -51,6 +46,16 @@ body {
     position: fixed;
     z-index: 10;
     top: 0;
+}
+
+.header_opacity_full {
+    opacity: 1;
+}
+
+.header_opacity_half {
+    opacity: 0.7;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .logo_container {
@@ -95,6 +100,7 @@ body {
 a,
 a:hover {
     color: white;
+    text-decoration: none;
 }
 
 .header_navigation li {
@@ -126,33 +132,28 @@ a:hover {
     content: "";
 }
 
-.slider_wrapper {
-    display: grid;
-    grid-template-columns: 80px 300px auto 75px;
-    /* padding: 10px; */
-    padding-top: 12px;
-    background-color: #f06c64;
-    height: 574px;
-}
-
 .nav_link:hover {
     content: "";
     color: #bc5c59;
 }
 
-.left_arrow {
-    margin: auto;
+
+/* Slider */
+
+.slider_wrapper {
+    display: grid;
+    grid-template-columns: 80px 300px 565px 75px;
+    padding-top: 12px;
+    background-color: #f06c64;
+    height: 594px;
 }
 
+.left_arrow,
 .right_arrow {
     margin: auto;
 }
 
-.left_arrow:hover {
-    margin: auto;
-    filter: saturate(8);
-}
-
+.left_arrow:hover,
 .right_arrow:hover {
     margin: auto;
     filter: saturate(8);
@@ -198,9 +199,77 @@ a:hover {
     transform: translate(0, -50%)
 }
 
+.sliders_wrapper_section {
+    position: relative;
+    width: 1020px;
+    min-height: 594px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sliders_wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1020px;
+    height: 600px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
 .slider {
+    position: absolute;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    animation: 0.5s ease-in-out;
+}
+
+.slider.next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+.slider_slide_active {
     display: block;
 }
+
+
+/*  Our services */
 
 .layout_6_column {
     display: grid;
@@ -581,10 +650,10 @@ body {
 }
 
 
-/* first grid column */
-
-
 /* Form for registration */
+
+
+/* First grid-column */
 
 #name,
 #email,
@@ -918,7 +987,8 @@ textarea {
 
 #message_block p {
     font-family: "Lato";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     text-align: left;
+    overflow: hidden;
 }
