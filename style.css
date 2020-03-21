@@ -52,6 +52,7 @@ body {
     z-index: 10;
     top: 0;
 }
+
 .header_opacity_full {
     opacity: 1;
 }
@@ -141,7 +142,7 @@ a:hover {
     /* padding: 10px; */
     padding-top: 12px;
     background-color: #f06c64;
-    height: 574px;
+    height: 594px;
 }
 
 .nav_link:hover {
@@ -212,9 +213,9 @@ a:hover {
     width: 100%;
     min-height: 594px;
     background-color: var(--primary);
-    border-bottom: 6px solid #ea676b;
     transition: all 0.3s ease-in-out;
 }
+
 .sliders_wrapper {
     position: relative;
     margin: 0 auto;
@@ -237,7 +238,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
+
 .layout_6_column {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -994,6 +996,7 @@ textarea {
 .from-right {
     animation-name: right;
 }
+
 .slider_slide_active {
     display: block;
 }

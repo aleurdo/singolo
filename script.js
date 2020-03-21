@@ -5,6 +5,7 @@ const MENU = document.getElementById('navigation');
 const FILTERS = document.getElementById('filter_list');
 const BUTTON = document.getElementById('submit_button');
 const OK_BUTTON = document.getElementById('message_ok');
+const PORTFOLIO = document.getElementById('portfolio_images');
 
 // Anchors
 const HEADER_ANCHOR = document.getElementById("main_wrapper")
@@ -98,8 +99,9 @@ function plusDivs(n) {
     }
     // showDivs(slideIndex += n, n);
 }
-function initSlide(n,d = "") {
-    console.log("direction:"+d);
+
+function initSlide(n, d = "") {
+    console.log("direction:" + d);
 
     var i;
     let direction;
@@ -122,7 +124,7 @@ function initSlide(n,d = "") {
 function showSlideDivs(n, a) {
     if (n > sliderList.length) { slideIndex = 1; }
     if (n < 1) { slideIndex = sliderList.length; }
-    console.log('active:'+(slideIndex-1));
+    console.log('active:' + (slideIndex - 1));
 
     sliderList[slideIndex - 1].classList.add('next', a);
     sliderList[slideIndex - 1].addEventListener('animationend', function() {
@@ -134,7 +136,7 @@ function showSlideDivs(n, a) {
 };
 
 function hideSlideDivs(n, a) {
-    console.log('passive: '+((slideIndex -1)))
+    console.log('passive: ' + ((slideIndex - 1)))
     sliderList[slideIndex - 1].classList.add(a);
     sliderList[slideIndex - 1].addEventListener('animationend', function() {
         this.classList.remove('slider_slide_active', a);
