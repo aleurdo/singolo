@@ -175,7 +175,7 @@ function buttonhandler(event) {
 };
 
 FILTERS.addEventListener('click', buttonhandler);
-PORTFOLIO_ANCHOR.addEventListener('click', (event) => {
+PORTFOLIO.addEventListener('click', (event) => {
     if (event.target.tagName === 'IMG') {
         PORTFOLIO.querySelectorAll('img').forEach(el => {
             el.classList.remove('active-list-img');
@@ -233,3 +233,6 @@ function ValidateEmail(inputText) {
     }
 
 }
+
+
+// Media

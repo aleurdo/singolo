@@ -25,6 +25,7 @@
 h1,
 body {
     margin: 0px;
+    background-color: #2d303a;
 }
 
 .main_wrapper {
@@ -271,11 +272,17 @@ a:hover {
 
 /*  Our services */
 
+.bottom_wrapper {
+    width: 100%;
+    height: 494px;
+    margin: 60 40px 0px 40px;
+    border-bottom: 6px solid #ffffff;
+}
+
 .layout_6_column {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding-left: 20px;
-    padding-right: 45px;
+    padding: 0 20px;
 }
 
 .wrapper_layout_6_column {
@@ -300,16 +307,15 @@ a:hover {
 
 .service_wrapper {
     width: 940px;
-    margin-top: 60px;
-    margin-left: 40px;
+    padding: 60px 40px 0 40px;
 }
 
 .service_wrapper h2 {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 30px;
-    margin-bottom: 10px;
     color: #666d89;
+    margin: 0px;
 }
 
 .service_wrapper p {
@@ -343,14 +349,6 @@ a:hover {
     color: #666d89;
 }
 
-.bottom_bottom_container {
-    position: absolute;
-    bottom: 0;
-    height: 6px;
-    width: 1020px;
-    background-color: #fff;
-}
-
 a.anchor {
     display: block;
     position: relative;
@@ -361,22 +359,20 @@ a.anchor {
 
 /* Portfolio */
 
-body {
-    margin: 0px;
-    background-color: #000000;
-}
-
 .main_wrapper_1 {
     position: relative;
-    width: 1020px;
-    height: 1604px;
+    width: 100%;
+    max-width: 1020px;
+    height: 1598px;
     margin: 0 auto;
     background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 
 .container_wrap {
     height: 864px;
-    background-color: #2d303a;
+    background-color: #2D303A;
+    border-bottom: 6px solid #323746;
 }
 
 .portfolio_wrap {
@@ -434,11 +430,6 @@ body {
     color: #c5c5c5;
 }
 
-.filter_list li:nth-child(1) {
-    color: #c5c5c5;
-    border: 1px solid #c5c5c5;
-}
-
 .portfolio_images {
     display: flex;
     align-items: flex-start;
@@ -467,14 +458,8 @@ body {
 
 /* It is bottom part of background */
 
-.background_bottom_container {
-    background-color: #323746;
-    height: 6px;
-}
-
 .about_us_container {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 60px 40px 0 40px;
 }
 
 .about_us_container h3 {
@@ -484,8 +469,7 @@ body {
     line-height: 18px;
     text-align: left;
     color: #666d89;
-    margin-top: 68px;
-    margin-bottom: 27px;
+    margin-top: 0px;
 }
 
 .about_us_container p {
@@ -495,6 +479,7 @@ body {
     font-family: "Lato";
     font-weight: 300;
     text-align: justify;
+    overflow: hidden;
 }
 
 .employees_photo_wrapper {
@@ -567,18 +552,8 @@ body {
 
 .social_container_1 a :hover {
     cursor: pointer;
-    background-color: #333;
-}
-
-
-/* It is bottom white background */
-
-.employees_bottom_container {
-    position: absolute;
-    bottom: 0px;
-    background-color: #fff;
-    height: 6px;
-    width: 1020px;
+    background-color: #d6564f;
+    border-style: double;
 }
 
 
@@ -838,7 +813,8 @@ textarea {
 
 .social_container a :hover {
     cursor: pointer;
-    background-color: #333;
+    border-color: #d6564f;
+    border-style: double;
 }
 
 .footer_container p {
@@ -940,9 +916,6 @@ textarea {
 .phonePowerOff {
     opacity: 1;
 }
-
-
-/* partfolio filter-list */
 
 .active-list {
     color: red
